@@ -13,6 +13,13 @@
   &__photo {
     width: $productImageWidth;
     height: $productImageHeight;
+
+    transition: transform 1s ease-in-out;
+  }
+
+  &__photo:hover {
+    transform: scale(1.2);
+    border: 3px solid #f3f3f3;
   }
 
   &__wrap {
@@ -83,6 +90,8 @@
     line-height: 16px;
     color: $productLinkBuyColor;
     background-color: $productLinkBuyColorBg;
+
+    transition: background-color 1s, color 1s;
   }
 
   &__link:hover {
