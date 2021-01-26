@@ -7,19 +7,21 @@
 
   &__image {
     display: flex;
-    padding: $productImagePadding;
+    padding: 10px 19px 15px;
   }
 
   &__photo {
-    width: $productImageWidth;
-    height: $productImageHeight;
+    width: 160px;
+    height: 154px;
+    padding-top: 20px;
 
-    transition: transform 1s ease-in-out;
+    transition: transform 1s;
   }
 
   &__photo:hover {
     transform: scale(1.2);
     border: 3px solid #f3f3f3;
+    border-radius: 5px;
   }
 
   &__wrap {
