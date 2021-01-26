@@ -7,19 +7,19 @@
 
   &__image {
     display: flex;
-    padding: 10px 19px 15px;
+    padding: 14px 19px 15px;
   }
 
   &__photo {
     width: 160px;
-    height: 154px;
-    padding-top: 20px;
+    height: 150px;
+    padding-top: 16px;
 
     transition: transform 1s;
   }
 
   &__photo:hover {
-    transform: scale(1.2);
+    transform: scale(1.25);
     border: 3px solid #f3f3f3;
     border-radius: 5px;
   }
