@@ -1,12 +1,21 @@
 .header {
-  @include spaceBetween;
-  height: $headerHeight;
-  width: 100%;
-  padding: $headerPadding;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: 60px;
+  justify-content: space-between;
 
-  box-shadow: $headerBoxShadow;
+  padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /*display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  padding: 0 50px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
 }
 
 .header--wrap {
-  margin-bottom: $headerMarginBottom;
+  margin-bottom: 50px;
 }

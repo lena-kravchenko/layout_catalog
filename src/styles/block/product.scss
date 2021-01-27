@@ -1,8 +1,83 @@
 .product {
-  flex: $productFlex;
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas:
+    "imac imac"
+    "title title"
+    "code code"
+    "st-review st-review"
+    "pr-name pr-amount"
+    "button button";
+  
 
-  border: $productBorder;
-  border-radius: $productBorderRadius;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
+  &__image {
+    display: grid;
+    grid-area: imac;
+    justify-content: center;
+    padding: 14px 19px 15px;
+  }
+
+  &__photo {
+    width: 160px;
+    height: 150px;
+    padding-top: 16px;
+
+    transition: transform 1s;
+  }
+
+  &__photo:hover {
+    transform: scale(1.25);
+    border: 3px solid #f3f3f3;
+    border-radius: 5px;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-area: title;
+    padding-left: 14px;
+  }
+
+  &__title {
+    font-size: $productTitleFontSize;
+    font-weight: $productTitleFontWeight;
+    padding-top: 17.5px;
+    line-height: 15.5px;
+    margin-bottom: -4.22px;
+  }
+
+  &__code {
+    display: code;
+    font-size: $productCodeFontSize;
+    font-weight: $productCodeFontWeight;
+    line-height: 11.5px;
+    margin-bottom: 15px;
+  }
+
+  &__stars-review {
+    display: grid;
+    grid-area: st-review;
+    justify-items: start;
+    /*justify-content: space-between;*/
+  }
+
+  &__review {
+    
+    font-size: $productReviewFontSize;
+    font-weight: $productReviewFontWeight;
+    line-height: 13px;
+    padding-right: 14px;
+    margin-top: 1.5px;
+  }
+
+
+  /*
+  flex: 200px 0 0;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
   padding-bottom: 15px;
 
   &__image {
@@ -46,7 +121,8 @@
   }
 
   &__stars-review {
-    @include spaceBetween;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__review {
@@ -101,5 +177,5 @@
     color: $productLinkBuyColorBg;
     border: $productLinkBuyHoverBorder;
   }
-
+*/
 }
