@@ -1,48 +1,5 @@
 .nav {
-  display: grid;
-  justify-items: end;
-  /*grid-template-columns: repeat(auto-fill);
-
-  grid-gap: 20px;*/
-
-  font-size: $navFontSize;
-  font-weight: $navFontWeight;
-  background-color: $navColorBg;
-  text-transform: uppercase;
-  
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(8, auto);
-    grid-gap: 20px;
-    white-space: nowrap;
-    /*justify-content: space-between;*/
-    /*justify-items: end;*/
-    padding: 0;
-    margin: 0;
-  }
-
-  &__item {
-    list-style: none;
-
-    transition: color 1s;
-  }
-
-  &__item :hover {
-    color: $navItemColor;
-  }
-
-  &__link {
-    display: grid;
-    align-items: center;
-    height: 60px;
-    
-  
-    text-decoration: none;
-    color: $navLinkColor;
-  }
-
-  /*display: flex;
-  align-items: center;
+  @include centered;
 
   font-size: $navFontSize;
   font-weight: $navFontWeight;
@@ -66,19 +23,19 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: space-between;
+    @include spaceBetween;
     align-items: center;
     height: $navLinkHeight;
   
     text-decoration: none;
     color: $navLinkColor;
-  }*/
+  }
+
 }
 
 .is-active {
   position: relative;
-  /*margin-left: -20px;*/
+  margin-left: $navLinkActiveMarginLeft;
 
   color: $navItemColor;
 
@@ -96,8 +53,8 @@
     content: "";
   }
 
-  /*@media screen and (max-width: 1024px) {
-    margin-left: -20px;
-  }*/
+  @media screen and (max-width: 1024px) {
+    margin-left: $navLinkActiveMarginLeft;
+  }
 
 }

@@ -1,22 +1,12 @@
 .header {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-auto-rows: 60px;
-  /*justify-content: space-between;*/
+  @include spaceBetween;
+  height: $headerHeight;
+  width: 100%;
+  padding: $headerPadding;
 
-  padding: 0 50px;
   box-shadow: $headerBoxShadow;
-
-  /*@media screen and (width: 1024px) {
-    grid-gap: 131px;
-  }
-
-  @media screen and (width: 1200px) {
-    grid-gap: 307px;
-  }*/
-  
 }
 
 .header--wrap {
-  margin-bottom: 50px;
+  margin-bottom: $headerMarginBottom;
 }
