@@ -1,27 +1,44 @@
 .product {
-  flex: $productFlex;
-
-  border: $productBorder;
-  border-radius: $productBorderRadius;
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas: "imac imac"
+    "title title"
+    "code code"
+    "review review"
+    "price price"
+    "button button";
   padding-bottom: 15px;
 
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+
   &__image {
-    display: flex;
-    padding: $productImagePadding;
+    display: grid;
+    grid-area: imac;
+    justify-content: center;
+    padding: 14px 19px 15px;
   }
 
   &__photo {
-    width: $productImageWidth;
-    height: $productImageHeight;
+    width: 160px;
+    height: 150px;
+    padding-top: 16px;
+
+    transition: transform 1s;
+  }
+
+  &__photo:hover {
+    transform: scale(1.25);
+    border: 3px solid #f3f3f3;
+    border-radius: 5px;
   }
 
   &__wrap {
-    display: flex;
-    flex-direction: column;
     padding-left: 14px;
   }
 
   &__title {
+    grid-area: title;
     font-size: $productTitleFontSize;
     font-weight: $productTitleFontWeight;
     padding-top: 17.5px;
@@ -30,6 +47,7 @@
   }
 
   &__code {
+    display: code;
     font-size: $productCodeFontSize;
     font-weight: $productCodeFontWeight;
     line-height: 11.5px;
@@ -37,23 +55,31 @@
   }
 
   &__stars-review {
-    @include spaceBetween;
+    display: grid;
+    grid-area: review;
+    grid-template-areas: "stars text";
+    justify-content: space-between;
+    padding-right: 7px;
   }
 
   &__review {
+    grid-area: text;
     font-size: $productReviewFontSize;
     font-weight: $productReviewFontWeight;
     line-height: 13px;
-    padding-right: 14px;
     margin-top: 1.5px;
   }
 
   &__price {
-    @include spaceBetween;
-    padding-right: 14px;
+    display: grid;
+    grid-area: price;
+    grid-template-areas: "name amount";
+    padding-right: 7px;
+    justify-content: space-between;
   }
 
   &__price-name {
+    grid-area: name;
     font-size: $productPriceNameFontSize;
     font-weight: $productPriceNameFontWeight;
     line-height: 13px;
@@ -61,6 +87,7 @@
   }
 
   &__price-amount {
+    grid-area: amount;
     font-size: $productPriceAmountFontSize;
     font-weight: $productPriceAmountFontWeight;
     line-height: 19px;
@@ -68,9 +95,10 @@
   }
 
   &__link {
-    @include centered;
-    width: $productLinkBuyWidth;
-    height: $productLinkBuyHeight;
+    display: grid;
+    align-items: center;
+    width: 170px;
+    height: 40px;
     border-radius: $productLinkBuyBorderRadius;
     margin-top: 4px;
 
@@ -83,6 +111,8 @@
     line-height: 16px;
     color: $productLinkBuyColor;
     background-color: $productLinkBuyColorBg;
+
+    transition: background-color 1s, color 1s;
   }
 
   &__link:hover {
@@ -90,5 +120,4 @@
     color: $productLinkBuyColorBg;
     border: $productLinkBuyHoverBorder;
   }
-
 }

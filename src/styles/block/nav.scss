@@ -14,6 +14,12 @@
   &__item {
     margin-left: $navItemMarginLeft;
     list-style: none;
+
+    transition: color 1s;
+  }
+
+  &__item :hover {
+    color: $navItemColor;
   }
 
   &__link {
@@ -25,9 +31,6 @@
     color: $navLinkColor;
   }
 
-  &__item :hover {
-    color: $navItemColor;
-  }
 }
 
 .is-active {
@@ -54,12 +57,4 @@
     margin-left: $navLinkActiveMarginLeft;
   }
 
-}
-
-.logo {
-  display: flex;
-  width: $logoSize;
-  height: $logoSize;
-
-  align-self: center;
 }
