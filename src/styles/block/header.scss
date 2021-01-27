@@ -2,18 +2,19 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-auto-rows: 60px;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 
   padding: 0 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: $headerBoxShadow;
 
-  /*display: flex;
-  justify-content: space-between;
-  height: 60px;
-  width: 100%;
-  padding: 0 50px;
+  /*@media screen and (width: 1024px) {
+    grid-gap: 131px;
+  }
 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
+  @media screen and (width: 1200px) {
+    grid-gap: 307px;
+  }*/
+  
 }
 
 .header--wrap {
