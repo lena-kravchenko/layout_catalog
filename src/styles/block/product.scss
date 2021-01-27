@@ -7,12 +7,21 @@
 
   &__image {
     display: flex;
-    padding: $productImagePadding;
+    padding: 14px 19px 15px;
   }
 
   &__photo {
-    width: $productImageWidth;
-    height: $productImageHeight;
+    width: 160px;
+    height: 150px;
+    padding-top: 16px;
+
+    transition: transform 1s;
+  }
+
+  &__photo:hover {
+    transform: scale(1.25);
+    border: 3px solid #f3f3f3;
+    border-radius: 5px;
   }
 
   &__wrap {
@@ -83,6 +92,8 @@
     line-height: 16px;
     color: $productLinkBuyColor;
     background-color: $productLinkBuyColorBg;
+
+    transition: background-color 1s, color 1s;
   }
 
   &__link:hover {
